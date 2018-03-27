@@ -1,0 +1,9 @@
+import React, {PureComponent} from 'react';
+
+export default class App extends PureComponent {
+  render = () => (
+    <section>
+      <h1>Hello friends</h1>
+    </section>
+  );
+}

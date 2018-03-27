@@ -1,0 +1,20 @@
+{
+  "name": "@francoisv/website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express-emitter": "^1.0.4",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "scripts": {
+    "babel": "babel --out-dir dist app",
+    "start": "node dist/server/start",
+    "webpack:web": "webpack --config dist/web/webpack.js"
+  },
+  "devDependencies": {
+    "babel-env": "^2.4.1",
+    "babel-loader": "^7.1.4"
+  }
+}
