@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _ForkMeOnGitHub = require('./components/Layout/ForkMeOnGitHub');
+
+var _ForkMeOnGitHub2 = _interopRequireDefault(_ForkMeOnGitHub);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -18,7 +22,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var _ref2 = _jsx('section', {}, void 0, _jsx('h1', {}, void 0, 'Hello friends'));
+var _ref2 = _jsx('section', {}, void 0, _jsx('h1', {}, void 0, 'francois | developer'), _jsx(_ForkMeOnGitHub2.default, {}));
 
 var App = function (_PureComponent) {
   _inherits(App, _PureComponent);

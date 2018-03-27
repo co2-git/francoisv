@@ -11,7 +11,8 @@
   "scripts": {
     "babel": "babel --out-dir dist app",
     "start": "node dist/server/start",
-    "webpack:web": "webpack --config dist/web/webpack.js"
+    "webpack:web": "webpack --config dist/web/webpack.js",
+    "save": "yarn babel && yarn webpack:web && git push origin master && git push heroku master"
   },
   "devDependencies": {
     "babel-env": "^2.4.1",
