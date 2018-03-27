@@ -1,5 +1,5 @@
-import path from 'path';
-import Server from 'express-emitter';
+const path = require('path');
+const Server = require('express-emitter');
 
 const router = app => app
   .set('port', 1981)

@@ -10,7 +10,7 @@
   },
   "scripts": {
     "babel": "babel --out-dir dist app",
-    "start": "node dist/server/start",
+    "start": "node app/server/start",
     "webpack:web": "webpack --config dist/web/webpack.js"
   },
   "devDependencies": {
