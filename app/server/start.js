@@ -2,7 +2,7 @@ const path = require('path');
 const Server = require('express-emitter');
 
 const router = app => app
-  .set('port', 1981)
+  .set('port', process.env.PORT || 1981)
   .get('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../../index.html'))
   })
