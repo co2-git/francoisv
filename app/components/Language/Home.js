@@ -2,6 +2,7 @@ import React, {PureComponent} from 'react';
 import map from 'lodash/map';
 import range from 'lodash/range';
 import filter from 'lodash/filter';
+import orderBy from 'lodash/orderBy';
 
 import Section from '../Base/Section';
 import languages from '../../../data/languages.json';
@@ -12,8 +13,10 @@ import * as fonts from '../../styles/vars/fonts';
 
 export default class Language extends PureComponent {
   state = {
-    languages: [...languages],
+    languages: orderBy(languages, ['name'], ['asc']),
     search: '',
+    orderBy: 'name',
+    order: 'asc',
   };
   render = () => (
     <Section style={styles.container}>
@@ -26,6 +29,57 @@ export default class Language extends PureComponent {
           type="text"
           value={this.state.search}
         />
+      </Section>
+      <Section style={styles.filters}>
+        <Icon name="filter" />
+        <Section style={styles.filtersWrapper}>
+          <Section style={styles.nameFilter}>
+            <h4
+              onClick={() => {
+                this.setState({
+                  languages: orderBy(this.state.languages, ['name'], ['asc']),
+                  orderBy: 'name',
+                  order: 'asc',
+                });
+              }}
+            >
+              Name
+            </h4>
+            {this.state.orderBy === 'name' && (
+              <Icon
+                name={this.state.order === 'asc' ? 'down-dir' : 'up-dir'}
+                onClick={() => {
+                  const order = this.state.order === 'asc' ? 'desc' : 'asc';
+                  const _languages = orderBy(this.state.languages, ['name'], [order]);
+                  this.setState({order, languages: _languages});
+                }}
+              />
+            )}
+          </Section>
+          <Section style={styles.nameFilter}>
+            <h4
+              onClick={() => {
+                this.setState({
+                  languages: orderBy(this.state.languages, ['level'], ['desc']),
+                  orderBy: 'level',
+                  order: 'desc',
+                });
+              }}
+            >
+              Level
+            </h4>
+            {this.state.orderBy === 'level' && (
+              <Icon
+                name={this.state.order === 'desc' ? 'down-dir' : 'up-dir'}
+                onClick={() => {
+                  const order = this.state.order === 'desc' ? 'asc' : 'desc';
+                  const _languages = orderBy(this.state.languages, ['level'], [order]);
+                  this.setState({order, languages: _languages});
+                }}
+              />
+            )}
+          </Section>
+        </Section>
       </Section>
       {map(this.state.languages, language => (
         <Section style={styles.language}>
@@ -91,5 +145,17 @@ const styles = {
     lineHeight: 1.5,
     padding: 2,
     marginLeft: 25,
+  },
+  filters: {
+    ...flex({direction: 'row', alignY: 'center', alignX: 'between'}),
+    color: '#666',
+  },
+  filtersWrapper: {
+    ...flex({direction: 'row', alignY: 'center', alignX: 'between'}),
+    flexGrow: 2,
+    margin: '0 10px',
+  },
+  nameFilter: {
+    ...flex({direction: 'row', alignY: 'center'}),
   },
 };
