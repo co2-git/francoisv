@@ -29,6 +29,7 @@ export default TopBar;
 const styles = {
   container: {
     ...flex({alignX: 'between', alignY: 'center'}),
+    flexShrink: 0,
   },
   title: {
     fontFamily: fonts.family.title,
