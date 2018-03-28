@@ -24,13 +24,11 @@ var _flex = require('../../styles/mixins/flex');
 
 var _flex2 = _interopRequireDefault(_flex);
 
-var _border = require('../../styles/mixins/border');
+var _fonts = require('../../styles/vars/fonts');
 
-var _border2 = _interopRequireDefault(_border);
+var fonts = _interopRequireWildcard(_fonts);
 
-var _ForkMeOnGitHub = require('./ForkMeOnGitHub');
-
-var _ForkMeOnGitHub2 = _interopRequireDefault(_ForkMeOnGitHub);
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -42,12 +40,15 @@ var _ref = _jsx('img', {
 var TopBar = function TopBar() {
   return _jsx(_Section2.default, {
     style: styles.container
-  }, void 0, _ref, _jsx('a', {
+  }, void 0, _ref, _jsx(_Section2.default, {
+    style: styles.title
+  }, void 0, 'francois :: developer'), _jsx('a', {
     href: 'https://github.com/co2-git/francoisv',
-    style: { color: 'black' }
+    style: { color: 'black' },
+    target: '_blank'
   }, void 0, _jsx(_Icon2.default, {
     name: 'github',
-    style: { fontSize: 40 }
+    style: { fontSize: 32 }
   })));
 };
 
@@ -55,5 +56,10 @@ exports.default = TopBar;
 
 
 var styles = {
-  container: _extends({}, (0, _flex2.default)({ alignX: 'between', alignY: 'center' }), _border2.default.bottom({ width: 1 }))
+  container: _extends({}, (0, _flex2.default)({ alignX: 'between', alignY: 'center' })),
+  title: {
+    fontFamily: fonts.family.title,
+    fontSize: fonts.size.pageTitle,
+    flexGrow: 2
+  }
 };
