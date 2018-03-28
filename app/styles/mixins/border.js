@@ -11,22 +11,36 @@ type TStyleMixinBorderOptions = {
 };
 
 type TStyleMixinBorder = {
-  borderColor: string,
-  borderStyle: TCSSBorderStyle,
-  borderWidth: number,
+  borderColor?: string,
+  borderStyle?: TCSSBorderStyle,
+  borderWidth?: number,
+  borderBottomColor?: string,
+  borderBottomStyle?: TCSSBorderStyle,
+  borderBottomWidth?: number,
 };
 
-const border = (options: TStyleMixinBorderOptions): TStyleMixinBorder => {
+type TBorderPrefix =
+  | 'border'
+  | 'borderBottom'
+  ;
+
+const border = (
+  options: TStyleMixinBorderOptions,
+  prefix: TBorderPrefix = 'border'
+): TStyleMixinBorder => {
   const {
     color = 'black',
     style = 'solid',
     width = 1,
   } = options;
   return {
-    borderColor: color,
-    borderStyle: style,
-    borderWidth: width,
+    [`${prefix}Color`]: color,
+    [`${prefix}Style`]: style,
+    [`${prefix}Width`]: width,
   };
 };
+
+border.bottom = (options: TStyleMixinBorderOptions): TStyleMixinBorder =>
+  border(options, 'borderBottom');
 
 export default border;
