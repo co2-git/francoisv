@@ -58,5 +58,25 @@
   {
     "name": "NodeJS",
     "level": 5
+  },
+  {
+    "name": "MySQL",
+    "level": 4
+  },
+  {
+    "name": "MongoDB",
+    "level": 4
+  },
+  {
+    "name": "Web Sockets",
+    "level": 5
+  },
+  {
+    "name": "express js",
+    "level": 5
+  },
+  {
+    "name": "hapi js",
+    "level": 3
   }
 ]
