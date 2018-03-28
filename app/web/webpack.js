@@ -1,8 +1,10 @@
-export default {
+const path = require('path');
+
+module.exports = {
   entry: './app/web/render.js',
   output: {
     filename: 'bundle.js',
-    path: __dirname,
+    path: path.resolve(__dirname, '../../app'),
   },
   mode: 'production',
   module: {

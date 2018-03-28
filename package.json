@@ -11,8 +11,8 @@
   },
   "scripts": {
     "babel": "babel --out-dir dist app",
-    "start": "node dist/server/start",
-    "webpack:web": "webpack --config dist/web/webpack.js",
+    "start": "node app/server/start",
+    "webpack:web": "webpack --config app/web/webpack.js",
     "save": "yarn babel && yarn webpack:web && git push origin master && git push heroku master"
   },
   "devDependencies": {
