@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
 import map from 'lodash/map';
 import range from 'lodash/range';
+import filter from 'lodash/filter';
 
 import Section from '../Base/Section';
 import languages from '../../../data/languages.json';
@@ -10,10 +11,23 @@ import border from '../../styles/mixins/border';
 import * as fonts from '../../styles/vars/fonts';
 
 export default class Language extends PureComponent {
+  state = {
+    languages: [...languages],
+    search: '',
+  };
   render = () => (
     <Section style={styles.container}>
-      <h1 style={styles.title}>Knowledge</h1>
-      {map(languages, language => (
+      <Section style={styles.header}>
+        <h1 style={styles.title}>Languages</h1>
+        <input
+          onChange={this.onChangeSearch}
+          placeholder="Search languages"
+          style={styles.input}
+          type="text"
+          value={this.state.search}
+        />
+      </Section>
+      {map(this.state.languages, language => (
         <Section style={styles.language}>
           <div style={styles.languageName}>{language.name}</div>
           <div style={styles.stars}>
@@ -24,11 +38,24 @@ export default class Language extends PureComponent {
               <Icon name="star-empty" />
             ))}
           </div>
-          <div>{language.years} years of experience</div>
         </Section>
       ))}
     </Section>
   );
+  onChangeSearch = (event) => {
+    const {value} = event.target;
+    if (!value) {
+      this.setState({search: value, languages: [...languages]});
+    } else {
+      this.setState({
+        languages: filter(
+          languages,
+          language => new RegExp(value, 'i').test(language.name)
+        ),
+        search: value,
+      });
+    }
+  };
 }
 
 const styles = {
@@ -54,5 +81,15 @@ const styles = {
   },
   stars: {
     padding: 8,
+  },
+  header: {
+    ...flex({direction: 'row', alignY: 'center'}),
+  },
+  input: {
+    flexGrow: 2,
+    fontSize: 22,
+    lineHeight: 1.5,
+    padding: 2,
+    marginLeft: 25,
   },
 };

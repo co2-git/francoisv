@@ -13,9 +13,9 @@ export default class Home extends PureComponent {
       <TopBar />
       <section style={styles.tabBar}>
       </section>
-      <Section style={styles.main}>
+      <section style={styles.main}>
         <Language />
-      </Section>
+      </section>
     </Section>
   );
 }
