@@ -40,7 +40,7 @@ var _ref = _jsx('img', {
 var TopBar = function TopBar() {
   return _jsx(_Section2.default, {
     style: styles.container
-  }, void 0, _ref, _jsx(_Section2.default, {
+  }, void 0, _ref, _jsx('div', {
     style: styles.title
   }, void 0, 'francois :: developer'), _jsx('a', {
     href: 'https://github.com/co2-git/francoisv',
@@ -59,7 +59,6 @@ var styles = {
   container: _extends({}, (0, _flex2.default)({ alignX: 'between', alignY: 'center' })),
   title: {
     fontFamily: fonts.family.title,
-    fontSize: fonts.size.pageTitle,
-    flexGrow: 2
+    fontSize: fonts.size.pageTitle
   }
 };

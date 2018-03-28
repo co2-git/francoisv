@@ -30,6 +30,10 @@ var _flex = require('../../styles/mixins/flex');
 
 var _flex2 = _interopRequireDefault(_flex);
 
+var _Home = require('../Language/Home');
+
+var _Home2 = _interopRequireDefault(_Home);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -39,6 +43,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var _ref2 = _jsx(_TopBar2.default, {});
+
+var _ref3 = _jsx(_Home2.default, {});
 
 var Home = function (_PureComponent) {
   _inherits(Home, _PureComponent);
@@ -59,9 +65,9 @@ var Home = function (_PureComponent) {
         style: styles.container
       }, void 0, _ref2, _jsx('section', {
         style: styles.tabBar
-      }, void 0), _jsx('section', {
+      }, void 0), _jsx(_Section2.default, {
         style: styles.main
-      }, void 0));
+      }, void 0, _ref3));
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 

@@ -11,9 +11,9 @@ const TopBar = () => (
       alt="francoisv"
       src="https://avatars1.githubusercontent.com/u/1662766?s=40&v=4"
     />
-    <Section style={styles.title}>
+    <div style={styles.title}>
       francois :: developer
-    </Section>
+    </div>
     <a
       href="https://github.com/co2-git/francoisv"
       style={{color: 'black'}}
@@ -33,6 +33,5 @@ const styles = {
   title: {
     fontFamily: fonts.family.title,
     fontSize: fonts.size.pageTitle,
-    flexGrow: 2,
   },
 };

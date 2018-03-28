@@ -1,0 +1,22 @@
+[
+  {
+    "name": "JavaScript",
+    "years": 22,
+    "level": 5
+  },
+  {
+    "name": "React",
+    "years": 5,
+    "level": 4
+  },
+  {
+    "name": "React Native",
+    "years": 3,
+    "level": 4
+  },
+  {
+    "name": "CSS",
+    "years": 22,
+    "level": 4
+  }
+]

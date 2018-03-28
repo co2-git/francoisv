@@ -5,6 +5,7 @@ import TopBar from './TopBar';
 import Section from '../Base/Section';
 import border from '../../styles/mixins/border';
 import flex from '../../styles/mixins/flex';
+import Language from '../Language/Home';
 
 export default class Home extends PureComponent {
   render = () => (
@@ -12,8 +13,9 @@ export default class Home extends PureComponent {
       <TopBar />
       <section style={styles.tabBar}>
       </section>
-      <section style={styles.main}>
-      </section>
+      <Section style={styles.main}>
+        <Language />
+      </Section>
     </Section>
   );
 }
