@@ -7,8 +7,8 @@ type TIconProps = {
   style?: Object,
 };
 
-const Icon = ({name, style}: TIconProps) => (
-  <i className={`icon-${name}`} style={style} />
+const Icon = ({name, style, ...props}: TIconProps) => (
+  <i className={`icon-${name}`} style={style} {...props} />
 );
 
 export default Icon;
