@@ -16,9 +16,17 @@ var _Section = require('../Base/Section');
 
 var _Section2 = _interopRequireDefault(_Section);
 
+var _Icon = require('../Base/Icon');
+
+var _Icon2 = _interopRequireDefault(_Icon);
+
 var _flex = require('../../styles/mixins/flex');
 
 var _flex2 = _interopRequireDefault(_flex);
+
+var _border = require('../../styles/mixins/border');
+
+var _border2 = _interopRequireDefault(_border);
 
 var _ForkMeOnGitHub = require('./ForkMeOnGitHub');
 
@@ -34,14 +42,18 @@ var _ref = _jsx('img', {
 var TopBar = function TopBar() {
   return _jsx(_Section2.default, {
     style: styles.container
-  }, void 0, _ref, _jsx(_ForkMeOnGitHub2.default, {
-    style: { flexGrow: 2 }
-  }));
+  }, void 0, _ref, _jsx('a', {
+    href: 'https://github.com/co2-git/francoisv',
+    style: { color: 'black' }
+  }, void 0, _jsx(_Icon2.default, {
+    name: 'github',
+    style: { fontSize: 40 }
+  })));
 };
 
 exports.default = TopBar;
 
 
 var styles = {
-  container: _extends({}, (0, _flex2.default)({}))
+  container: _extends({}, (0, _flex2.default)({ alignX: 'between', alignY: 'center' }), _border2.default.bottom({ width: 1 }))
 };
