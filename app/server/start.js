@@ -1,6 +1,6 @@
 const path = require('path');
 const Server = require('express-emitter');
-import express from 'express';
+const express = require('express');
 
 const router = app => app
   .set('port', process.env.PORT || 1981)
@@ -9,7 +9,7 @@ const router = app => app
   })
   .get('/web.js', (req, res) => {
     res.type('text/javascript');
-    res.sendFile(path.resolve(__dirname, '../web/bundle.js'))
+    res.sendFile(path.resolve(__dirname, '../bundle.js'))
   })
   .use('/assets', express.static(path.join(__dirname, '../../assets')))
   ;
