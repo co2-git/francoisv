@@ -23,5 +23,20 @@
     "name": "HTML",
     "years": 22,
     "level": 5
+  },
+  {
+    "name": "Babel",
+    "years": 3,
+    "level": 4
+  },
+  {
+    "name": "Webpack",
+    "years": 2,
+    "level": 3
+  },
+  {
+    "name": "ESLint",
+    "years": 4,
+    "level": 4
   }
 ]

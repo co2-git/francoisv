@@ -7,16 +7,15 @@
     "express-emitter": "^1.0.4",
     "lodash": "^4.17.5",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "webpack": "^4.1.1",
+    "babel-env": "^2.4.1",
+    "babel-loader": "^7.1.4"
   },
   "scripts": {
     "babel": "babel --out-dir dist app",
     "start": "yarn webpack:web && node app/server/start",
     "webpack:web": "webpack --config app/web/webpack.js",
     "save": "yarn babel && yarn webpack:web && git push origin master && git push heroku master"
-  },
-  "devDependencies": {
-    "babel-env": "^2.4.1",
-    "babel-loader": "^7.1.4"
   }
 }
