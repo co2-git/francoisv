@@ -21,6 +21,11 @@ const Project = ({project}) => (
             npm
           </a>
         )}
+        {project.links.mac && (
+          <a href={project.links.mac} target="_blank">
+            <Icon name="apple" />
+          </a>
+        )}
       </Section>
     </Section>
     <p>{project.description}</p>

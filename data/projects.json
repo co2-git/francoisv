@@ -22,5 +22,13 @@
       "github": "https://github.com/co2-git/maeva-mongodb",
       "npm": "https://www.npmjs.com/package/maeva-mongodb"
     }
+  },
+  {
+    "name": "ReactNativeRX",
+    "description": "Electron app for React Native commands",
+    "links": {
+      "github": "https://github.com/co2-git/react-native-rx",
+      "mac": "https://drive.google.com/open?id=1qxr3zHGVKb4b19yepSgGtX76FsDVAjjH"
+    }
   }
 ]

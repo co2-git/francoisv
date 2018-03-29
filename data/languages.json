@@ -154,5 +154,13 @@
   {
     "name": "Meteor JS",
     "level": 2
+  },
+  {
+    "name": "Electron",
+    "level": 4
+  },
+  {
+    "name": "Redux Saga",
+    "level": 5
   }
 ]
