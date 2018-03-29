@@ -9,6 +9,11 @@ const margin = (options = {}) => {
     marginBottom = options.vertical;
   }
 
+  if (options.horizontal) {
+    marginRight = options.horizontal;
+    marginLeft = options.horizontal;
+  }
+
   if (
     marginTop === marginBottom &&
     marginTop === marginLeft &&

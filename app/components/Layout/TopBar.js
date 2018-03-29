@@ -3,6 +3,7 @@ import React from 'react';
 import Section from '../Base/Section';
 import Icon from '../Base/Icon';
 import flex from '../../styles/mixins/flex';
+import margin from '../../styles/mixins/margin';
 import * as fonts from '../../styles/vars/fonts';
 
 const TopBar = () => (
@@ -10,6 +11,7 @@ const TopBar = () => (
     <img
       alt="francoisv"
       src="https://avatars1.githubusercontent.com/u/1662766?s=40&v=4"
+      style={{width: 40, height: 40}}
     />
     <div style={styles.title}>
       francois :: developer
@@ -19,7 +21,7 @@ const TopBar = () => (
       style={{color: 'black'}}
       target="_blank"
     >
-      <Icon name="github" style={{fontSize: 32}} />
+      <Icon name="github" style={{fontSize: 30, color: '#666'}} />
     </a>
   </Section>
 );

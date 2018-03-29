@@ -4,13 +4,13 @@ import range from 'lodash/range';
 import filter from 'lodash/filter';
 import orderBy from 'lodash/orderBy';
 
-import Section from '../Base/Section';
-import languages from '../../../data/languages.json';
-import Icon from '../Base/Icon';
-import Title from '../Base/Title';
-import flex from '../../styles/mixins/flex';
-import border from '../../styles/mixins/border';
 import * as fonts from '../../styles/vars/fonts';
+import border from '../../styles/mixins/border';
+import flex from '../../styles/mixins/flex';
+import Icon from '../Base/Icon';
+import languages from '../../../data/languages.json';
+import Page from '../Base/Page';
+import Section from '../Base/Section';
 
 export default class Language extends PureComponent {
   state = {
@@ -20,17 +20,14 @@ export default class Language extends PureComponent {
     order: 'asc',
   };
   render = () => (
-    <Section style={styles.container}>
-      <Section style={styles.header}>
-        <Title>Languages</Title>
-        <input
-          onChange={this.onChangeSearch}
-          placeholder="Search languages"
-          style={styles.input}
-          type="text"
-          value={this.state.search}
-        />
-      </Section>
+    <Page title="Languages">
+      <input
+        onChange={this.onChangeSearch}
+        placeholder="Search languages"
+        style={styles.input}
+        type="text"
+        value={this.state.search}
+      />
       <Section style={styles.filters}>
         <Icon name="filter" />
         <Section style={styles.filtersWrapper}>
@@ -95,7 +92,7 @@ export default class Language extends PureComponent {
           </div>
         </Section>
       ))}
-    </Section>
+    </Page>
   );
   onChangeSearch = (event) => {
     const {value} = event.target;
@@ -140,7 +137,6 @@ const styles = {
     fontSize: 22,
     lineHeight: 1.5,
     padding: 2,
-    marginLeft: 25,
   },
   filters: {
     ...flex({direction: 'row', alignY: 'center', alignX: 'between'}),

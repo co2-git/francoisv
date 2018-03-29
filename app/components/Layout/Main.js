@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import {Route, Switch} from 'react-router-dom';
 
-import Language from '../Language/Home';
+import Languages from '../Language/Languages';
 import Project from '../Project/Home';
 import Articles from '../Article/List';
 import Article from '../Article/Article';
@@ -9,8 +9,8 @@ import Article from '../Article/Article';
 const Main = () => (
   <main style={styles.container}>
     <Switch>
-      <Route exact path="/" component={Language} />
-      <Route path="/languages" component={Language} />
+      <Route exact path="/" component={Languages} />
+      <Route path="/languages" component={Languages} />
       <Route path="/projects" component={Project} />
       <Route exact path="/articles" component={Articles} />
       <Route path="/articles/:article" component={Article} />

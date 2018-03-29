@@ -45,7 +45,7 @@ const styles = {
   wrapper: {
     ...flex({alignX: 'between'}),
     paddingLeft: 0,
-    padding: 10,
+    padding: 20,
   },
   link: {
     listStyleType: 'none',
