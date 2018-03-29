@@ -7,6 +7,7 @@ import orderBy from 'lodash/orderBy';
 import Section from '../Base/Section';
 import languages from '../../../data/languages.json';
 import Icon from '../Base/Icon';
+import Title from '../Base/Title';
 import flex from '../../styles/mixins/flex';
 import border from '../../styles/mixins/border';
 import * as fonts from '../../styles/vars/fonts';
@@ -21,7 +22,7 @@ export default class Language extends PureComponent {
   render = () => (
     <Section style={styles.container}>
       <Section style={styles.header}>
-        <h1 style={styles.title}>Languages</h1>
+        <Title>Languages</Title>
         <input
           onChange={this.onChangeSearch}
           placeholder="Search languages"
@@ -127,11 +128,6 @@ const styles = {
     fontWeight: 'bold',
     fontFamily: fonts.family.title,
     fontSize: fonts.size.pageTitle,
-  },
-  title: {
-    fontWeight: 'bold',
-    fontFamily: fonts.family.title,
-    fontSize: 24,
   },
   stars: {
     padding: 8,

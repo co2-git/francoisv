@@ -1,0 +1,10 @@
+[
+  {
+    "name": "maeva",
+    "description": "Database agnostic models",
+    "links": {
+      "github": "https://github.com/co2-git/maeva",
+      "npm": "https://www.npmjs.com/package/maeva"
+    }
+  }
+]
