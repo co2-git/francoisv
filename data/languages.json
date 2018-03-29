@@ -98,5 +98,49 @@
   {
     "name": "Linux",
     "level": 4
+  },
+  {
+    "name": "Catalan",
+    "level": 4
+  },
+  {
+    "name": "Thai",
+    "level": 2
+  },
+  {
+    "name": "German",
+    "level": 1
+  },
+  {
+    "name": "Portuguese",
+    "level": 1
+  },
+  {
+    "name": "Java",
+    "level": 2
+  },
+  {
+    "name": "Python",
+    "level": 2
+  },
+  {
+    "name": "PHP",
+    "level": 3
+  },
+  {
+    "name": "Ruby",
+    "level": 2
+  },
+  {
+    "name": "C++",
+    "level": 1
+  },
+  {
+    "name": "Blockchain",
+    "level": 2
+  },
+  {
+    "name": "Bash",
+    "level": 4
   }
 ]

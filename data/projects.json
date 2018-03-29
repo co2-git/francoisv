@@ -6,5 +6,13 @@
       "github": "https://github.com/co2-git/maeva",
       "npm": "https://www.npmjs.com/package/maeva"
     }
+  },
+  {
+    "name": "maeva-sockets",
+    "description": "Sockets API for maeva",
+    "links": {
+      "github": "https://github.com/co2-git/maeva-sockets",
+      "npm": "https://www.npmjs.com/package/maeva-sockets"
+    }
   }
 ]
