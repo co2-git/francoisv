@@ -14,5 +14,13 @@
       "github": "https://github.com/co2-git/maeva-sockets",
       "npm": "https://www.npmjs.com/package/maeva-sockets"
     }
+  },
+  {
+    "name": "maeva-mongodb",
+    "description": "MongoDB connector for maeva",
+    "links": {
+      "github": "https://github.com/co2-git/maeva-mongodb",
+      "npm": "https://www.npmjs.com/package/maeva-mongodb"
+    }
   }
 ]
