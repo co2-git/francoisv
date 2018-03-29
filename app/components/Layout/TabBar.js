@@ -16,6 +16,11 @@ const links = [
     route: '/projects',
     title: 'Projects',
   },
+  {
+    icon: 'tags',
+    route: '/articles',
+    title: 'Articles',
+  },
 ];
 
 const TabBar = () => (

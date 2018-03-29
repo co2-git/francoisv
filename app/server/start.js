@@ -11,6 +11,11 @@ const router = app => app
   .get('/', renderIndex)
   .get('/languages', renderIndex)
   .get('/projects', renderIndex)
+  .get('/articles', renderIndex)
+  .get('/articles/:article', renderIndex)
+  .get('/article/:article', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../../articles/', `${req.params.article}.md`));
+  })
   .get('/web.js', (req, res) => {
     res.type('text/javascript');
     res.sendFile(path.resolve(__dirname, '../bundle.js'))
