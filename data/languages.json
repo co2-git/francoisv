@@ -142,5 +142,17 @@
   {
     "name": "Bash",
     "level": 4
+  },
+  {
+    "name": "GraphQL",
+    "level": 3
+  },
+  {
+    "name": "Apollo",
+    "level": 3
+  },
+  {
+    "name": "Meteor JS",
+    "level": 2
   }
 ]
