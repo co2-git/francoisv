@@ -4,6 +4,7 @@ import map from 'lodash/map';
 
 import Icon from '../Base/Icon';
 import flex from '../../styles/mixins/flex';
+import * as fonts from '../../styles/vars/fonts';
 
 const links = [
   {
@@ -49,9 +50,10 @@ const styles = {
   link: {
     listStyleType: 'none',
     fontFamily: "'Oswald', sans-serif",
-    fontSize: 14,
+    fontSize: fonts.size.pageTitle,
   },
   linkText: {
     color: 'black',
+    textDecoration: 'none',
   },
 };
