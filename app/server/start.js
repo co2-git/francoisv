@@ -2,11 +2,15 @@ const path = require('path');
 const Server = require('express-emitter');
 const express = require('express');
 
+const renderIndex = (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../../index.html'))
+};
+
 const router = app => app
   .set('port', process.env.PORT || 1981)
-  .get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../../index.html'))
-  })
+  .get('/', renderIndex)
+  .get('/languages', renderIndex)
+  .get('/projects', renderIndex)
   .get('/web.js', (req, res) => {
     res.type('text/javascript');
     res.sendFile(path.resolve(__dirname, '../bundle.js'))

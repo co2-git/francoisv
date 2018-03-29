@@ -1,11 +1,11 @@
-import React, {PureComponent} from 'react';
+import React from 'react';
 
-import Splash from './components/Layout/Splash';
+import Home from './components/Layout/Home';
 
-export default class App extends PureComponent {
-  render = () => (
-    <React.Fragment>
-      <Splash />
-    </React.Fragment>
-  );
-}
+const App = () => (
+  <React.Fragment>
+    <Home />
+  </React.Fragment>
+);
+
+export default App;

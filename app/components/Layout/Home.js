@@ -1,38 +1,22 @@
 import React, {PureComponent} from 'react';
 
-import ForkMeOnGitHub from './ForkMeOnGitHub';
 import TopBar from './TopBar';
+import TabBar from './TabBar';
+import Main from './Main';
 import Section from '../Base/Section';
-import border from '../../styles/mixins/border';
-import flex from '../../styles/mixins/flex';
-import Language from '../Language/Home';
 
-export default class Home extends PureComponent {
-  render = () => (
-    <Section style={styles.container}>
-      <TopBar />
-      <section style={styles.tabBar}>
-      </section>
-      <section style={styles.main}>
-        <Language />
-      </section>
-    </Section>
-  );
-}
+const Home = () => (
+  <Section style={styles.container}>
+    <TopBar />
+    <TabBar />
+    <Main />
+  </Section>
+);
+
+export default Home;
 
 const styles = {
   container: {
     height: '100vh',
-  },
-  topBar: {
-    boxSizing: 'border-box',
-  },
-  tabBar: {
-    boxSizing: 'border-box',
-  },
-  main: {
-    boxSizing: 'border-box',
-    flexGrow: 2,
-    overflow: 'auto',
   },
 };

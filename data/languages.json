@@ -72,11 +72,27 @@
     "level": 5
   },
   {
-    "name": "express js",
+    "name": "Express js",
     "level": 5
   },
   {
-    "name": "hapi js",
+    "name": "Hapi js",
     "level": 3
+  },
+  {
+    "name": "Git",
+    "level": 5
+  },
+  {
+    "name": "Redux",
+    "level": 5
+  },
+  {
+    "name": "Flow",
+    "level": 5
+  },
+  {
+    "name": "TypeScript",
+    "level": 4
   }
 ]
