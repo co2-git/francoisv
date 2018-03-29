@@ -3,6 +3,7 @@ export const family = {
 };
 
 export const size = {
-  headerTitle: 24,
-  pageTitle: 18,
+  headerTitle: 28,
+  pageTitle: 24,
+  normal: 16,
 };
