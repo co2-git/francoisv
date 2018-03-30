@@ -17,8 +17,8 @@
   },
   "scripts": {
     "babel": "babel --out-dir dist app",
-    "start": "yarn webpack:web && node app/server/start",
-    "webpack:web": "webpack --config app/web/webpack.js",
-    "save": "yarn babel && yarn webpack:web && git push origin master && git push heroku master"
+    "start": "yarn webpack && node app/server/start",
+    "webpack": "webpack --config app/web/webpack.js",
+    "save": "yarn babel && yarn webpack && git push origin master && git push heroku master"
   }
 }

@@ -7,5 +7,12 @@
       "Talkback",
       "Accessibility"
     ]
+  },
+  {
+    "title": "Minimize Electron app size",
+    "tags": [
+      "Electron",
+      "Webpack"
+    ]
   }
 ]
