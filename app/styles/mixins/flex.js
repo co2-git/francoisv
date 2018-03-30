@@ -2,6 +2,9 @@
 
 type TStyleMixinFlexOptions = {
   direction?: 'column' | 'row',
+  alignY?: 'center',
+  alignX?: 'between' | 'around' | 'center',
+  wrap?: boolean | 'reverse',
 };
 
 type TStyleMixinFlex = {|
@@ -9,6 +12,7 @@ type TStyleMixinFlex = {|
   display: 'flex',
   flexDirection: 'column' | 'row',
   justifyContent: string,
+  flexWrap: 'wrap' | 'unset',
 |};
 
 const flex = (options: TStyleMixinFlexOptions = {}): TStyleMixinFlex => {
@@ -17,6 +21,8 @@ const flex = (options: TStyleMixinFlexOptions = {}): TStyleMixinFlex => {
   } = options;
   let justifyContent = 'unset';
   let alignItems = 'unset';
+  let flexWrap = 'unset';
+
   if (direction === 'row') {
     if (options.alignX === 'between') {
       justifyContent = 'space-between';
@@ -25,11 +31,15 @@ const flex = (options: TStyleMixinFlexOptions = {}): TStyleMixinFlex => {
       alignItems = 'center';
     }
   }
+  if (options.wrap) {
+    flexWrap = 'wrap';
+  }
   return {
     alignItems,
     display: 'flex',
     flexDirection: direction,
     justifyContent,
+    flexWrap,
   };
 };
 

@@ -2,18 +2,17 @@ import React, {PureComponent} from 'react';
 import map from 'lodash/map';
 
 import projects from '../../../data/projects.json';
-import Title from '../Base/Title';
+import Page from '../Base/Page';
 import Project from './Project';
 
 const Projects = () => (
-  <div style={styles.container}>
-    <Title>Projects</Title>
+  <Page title="Projects">
     <div>
       {map(projects, project => (
         <Project key={project.name} project={project} />
       ))}
     </div>
-  </div>
+  </Page>
 );
 
 export default Projects;

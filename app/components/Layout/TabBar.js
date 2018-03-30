@@ -50,7 +50,7 @@ const styles = {
   link: {
     listStyleType: 'none',
     fontFamily: "'Oswald', sans-serif",
-    fontSize: fonts.size.pageTitle,
+    fontSize: fonts.size.linkTitle,
   },
   linkText: {
     color: 'black',
