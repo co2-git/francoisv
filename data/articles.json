@@ -14,5 +14,13 @@
       "Electron",
       "Webpack"
     ]
+  },
+  {
+    "title": "Lazy loading React components",
+    "tags": [
+      "React",
+      "Lazy loading",
+      "Code splitting"
+    ]
   }
 ]

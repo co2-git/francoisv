@@ -162,5 +162,13 @@
   {
     "name": "Redux Saga",
     "level": 5
+  },
+  {
+    "name": "React Loadable",
+    "level": 4
+  },
+  {
+    "name": "Vue JS",
+    "level": 2
   }
 ]
