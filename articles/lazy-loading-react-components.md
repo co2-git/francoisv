@@ -11,36 +11,10 @@ It is very useful when used with assets bundler such as Webpack to do [code spli
 
 # An overview of import()
 
-```js
-// Static hoisting import
-import foo from 'foo';
-foo();
-
-// Dynamic import
-import('foo').then(foo => foo());
-```
+https://gist.github.com/co2-git/f88060c799ac8d434c2ff0665e8b8b7e.js
 
 # React loadable
 
 [React loadable](https://npmjs.org/package/react-loadable) is a library that allows you to dynamically require your React components
 
-```jsx
-import React from 'react';
-// Static import
-import Foo from './Foo';
-
-export default function Bar() {
-  return <Foo />;
-}
-
-// Dynamic import
-import Loadable from 'react-loadable';
-const Foo = Loadable({
-  loader: () => import('./foo'),
-  loading: () => <div>Loading...</div>
-});
-
-export default function Bar() {
-  return <Foo />;
-}
-```
+https://gist.github.com/co2-git/96a59626bde9ab53f5ce04e25fca5c7f.js

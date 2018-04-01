@@ -4046,6 +4046,12 @@ react-dom@^16.2.0:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
+react-gist@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/react-gist/-/react-gist-1.2.1.tgz#969ceb706b5503d84f398c5953818ee631a05fd0"
+  dependencies:
+    prop-types "^15.6.0"
+
 react-markdown@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/react-markdown/-/react-markdown-3.3.0.tgz#a87cdd822aa9302d6add9687961dd1a82a45d02e"

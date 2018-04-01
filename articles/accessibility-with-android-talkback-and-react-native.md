@@ -13,15 +13,7 @@ It is important to get familiar with using Talkback before even considering supp
 
 React Native is doing a nice job by offering out-of-the-box support for voice readers. React Native components are accessible by default:
 
-```jsx
-<Text>This text will be read aloud if you touch it</Text>
-```
-
-```jsx
-<TouchableNativeFeedback>
- <Text>This text will be read and announced as a touchable</Text>
-</TouchableNativeFeedback>
-```
+https://gist.github.com/co2-git/b5e6e5f2a027e3cc27b30482b82a93a2.js
 
 You can turn accessibility off (`<Text accessible={false} />`) or specify a different text to be read (`<Text accessibilityLabel=”This text will be read”>This text will not be read</Text>`)
 

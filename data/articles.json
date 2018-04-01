@@ -22,5 +22,11 @@
       "Lazy loading",
       "Code splitting"
     ]
+  },
+  {
+    "title": "Advanced usage of flow",
+    "tags": [
+      "Flow"
+    ]
   }
 ]
