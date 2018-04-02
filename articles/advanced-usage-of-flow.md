@@ -1,7 +1,7 @@
 Advanced usage of flow
 ===
 
-[Flow](https://flow.org) is a javascript add-on to add strong type. It is very similar to [TypeScript](http://www.typescriptlang.org/). For this article, I assume you have a basic knowledge of Flow.
+[Flow](https://flow.org) is a javascript add-on to add strong type support. It is very similar to [TypeScript](http://www.typescriptlang.org/). For this article, I assume you have a basic knowledge of Flow.
 
 # Tip
 
