@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
 import {Link} from 'react-router-dom';
 import map from 'lodash/map';
+import {connect} from 'react-redux';
 
 import Icon from '../Base/Icon';
 import flex from '../../styles/mixins/flex';
@@ -24,7 +25,7 @@ const links = [
   },
 ];
 
-const TabBar = () => (
+const TabBar = ({top}) => (
   <header>
     <nav>
       <ul style={styles.wrapper}>
@@ -39,13 +40,15 @@ const TabBar = () => (
   </header>
 );
 
-export default TabBar;
+const selector = state => ({top: state.UI.scrollTop});
+
+export default connect(selector)(TabBar);
 
 const styles = {
   wrapper: {
     ...flex({alignX: 'between'}),
     paddingLeft: 0,
-    padding: 20,
+    padding: 10,
   },
   link: {
     listStyleType: 'none',

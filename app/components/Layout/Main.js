@@ -5,9 +5,10 @@ import Languages from '../Language/Languages';
 import Project from '../Project/Home';
 import Articles from '../Article/List';
 import Article from '../Article/Article';
+import * as UIActions from '../../redux/actions/UIActions';
 
 const Main = () => (
-  <main style={styles.container}>
+  <main onScroll={UIActions.onScroll} style={styles.container}>
     <Switch>
       <Route exact path="/" component={Languages} />
       <Route path="/languages" component={Languages} />
@@ -23,7 +24,7 @@ export default Main;
 const styles = {
   container: {
     boxSizing: 'border-box',
-    flexGrow: 2,
-    overflow: 'auto',
+    // flexGrow: 2,
+    // overflow: 'auto',
   },
 };

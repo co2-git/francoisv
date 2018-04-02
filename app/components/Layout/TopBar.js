@@ -32,6 +32,9 @@ const styles = {
   container: {
     ...flex({alignX: 'between', alignY: 'center'}),
     flexShrink: 0,
+    background: 'linear-gradient(#eee, #fff)',
+    boxShadow: '0 2px 1px 1px rgba(0, 0, 0, 0.3)',
+    marginBottom: 8,
   },
   title: {
     fontFamily: fonts.family.title,
