@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Title from './Title';
+import padding from '../../styles/mixins/padding';
 
 const Page = ({children, title}) => (
   <section style={styles.container}>
@@ -14,6 +15,6 @@ export default Page;
 const styles = {
   container: {
     boxSizing: 'borderBox',
-    padding: 16,
+    ...padding({horizontal: 16, vertical: 0, bottom: 60}),
   },
 };

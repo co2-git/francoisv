@@ -8,8 +8,10 @@ import Section from '../Base/Section';
 const Home = () => (
   <Section style={styles.container}>
     <TopBar />
-    <TabBar />
-    <Main />
+    <div style={{flexGrow: 2, overflow: 'auto'}}>
+      <TabBar />
+      <Main />
+    </div>
   </Section>
 );
 
